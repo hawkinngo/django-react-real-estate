@@ -52,7 +52,7 @@ class CustomUserManager(BaseUserManager):
 
         return user
 
-    def create_user(
+    def create_superuser(
         self,
         username,
         first_name,
