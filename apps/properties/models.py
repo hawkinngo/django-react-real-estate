@@ -99,22 +99,22 @@ class Property(TimeStampedUUIDModel):
     )
     cover_photo = models.ImageField(
         verbose_name=_("Main Photo"),
-        default="/properties/house_sample.jpg",
+        default="properties/house_sample.jpg",
         upload_to="properties/",
         null=True,
         blank=True,
     )
     photo1 = models.ImageField(
-        default="/properties/interior_sample.jpg", null=True, blank=True
+        default="properties/interior_sample.jpg", null=True, blank=True
     )
     photo2 = models.ImageField(
-        default="/properties/interior_sample.jpg", null=True, blank=True
+        default="properties/interior_sample.jpg", null=True, blank=True
     )
     photo3 = models.ImageField(
-        default="/properties/interior_sample.jpg", null=True, blank=True
+        default="properties/interior_sample.jpg", null=True, blank=True
     )
     photo4 = models.ImageField(
-        default="/properties/interior_sample.jpg", null=True, blank=True
+        default="properties/interior_sample.jpg", null=True, blank=True
     )
     published_status = models.BooleanField(
         verbose_name=_("Published Status"), default=False
@@ -131,8 +131,8 @@ class Property(TimeStampedUUIDModel):
         verbose_name_plural = "Properties"
 
     def save(self, *args, **kwargs):
-        self.title = str.title(self.title())
-        self.description = str.descritpion(self.description)
+        self.title = str.title(self.title)
+        self.description = str.capitalize(self.description)
         self.ref_code = "".join(
             random.choices(string.ascii_uppercase + string.digits, k=10)
         )

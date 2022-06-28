@@ -30,6 +30,14 @@ class PropertySerializer(serializers.ModelSerializer):
             "bedrooms",
             "bathrooms",
             "advert_type",
+            "property_type",
+            "cover_photo",
+            "photo1",
+            "photo2",
+            "photo3",
+            "photo4",
+            "published_status",
+            "views",
         ]
 
     def get_user(self, obj):
