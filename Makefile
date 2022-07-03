@@ -9,7 +9,7 @@ build:
 	docker compose up --build -d --remove-orphans
 
 up:
-	docker compose up
+	docker compose up -d
 
 down:
 	docker compose down
@@ -33,19 +33,19 @@ down-v:
 	docker compose down -v
 
 volume:
-	docker volume inspect estate-src_postgres_data
+	docker volume inspect django-react-real-estate_postgres_data
 
 estate-db:
-	docker compose exec postgres-db psql --username=admin
+	docker compose exec postgres-db psql --username=admin --dbname=django_real_estate
 
 test:
-	docker compose exec api pytest -p no:warning --cov=.
+	docker compose exec api pytest -p no:warnings --cov=.
 
 test-html:
-	docker compose exec api pytest -p no:warning --cov=. --cov-report html
+	docker compose exec api pytest -p no:warnings --cov=. --cov-report html
 
 flake8:
-	docker compose exec api flake8
+	docker compose exec api flake8 .
 
 black-check:
 	docker compose exec api black --check --exclude=migrations .
@@ -61,3 +61,6 @@ isort-check:
 
 isort-diff:
 	docker compose exec api isort . --diff --skip env --skip migrations
+
+isort:
+	docker compose exec api isort . --skip env --skip migrations

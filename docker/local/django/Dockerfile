@@ -9,9 +9,9 @@ LABEL maintainer="hawkin.ngo@gmail.com"
 LABEL youtube="https://www.youtube.com/channel/UCxyM8cQ7ozIUXPPSR0rDFyg"
 LABEL description="Development Image for Real Estate Project"
 
-ENV PYTHONDONTWRITEBYCODE 1
+ENV PYTHONDONTWRITEBYTECODE 1
 
-ENV PYTHONUMBUFFERED 1
+ENV PYTHONUNBUFFERED 1
 
 RUN apt-get update \
     && apt-get install -y build-essential \

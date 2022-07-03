@@ -1,6 +1,6 @@
-import environ
-
 from pathlib import Path
+
+import environ
 
 env = environ.Env(DEBUG=(bool, False))
 
@@ -17,7 +17,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = env("ALLOWED_HOSTS").replace('"', "").split(" ")
 
 
 # Application definition
