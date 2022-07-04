@@ -23,9 +23,9 @@ ALLOWED_HOSTS = env("ALLOWED_HOSTS").replace('"', "").split(" ")
 # Application definition
 
 DJANGO_APPS = [
+    "django.contrib.contenttypes",
     "django.contrib.admin",
     "django.contrib.auth",
-    "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
@@ -40,6 +40,7 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
     "djoser",
     "rest_framework_simplejwt",
+    "djcelery_email",
 ]
 
 LOCAL_APPS = [
