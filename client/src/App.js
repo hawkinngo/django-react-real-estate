@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <h1>Real Estate</h1>
-      <div>The real test start s here...</div>
+      <div>The real test start here...</div>
     </div>
   );
 }
