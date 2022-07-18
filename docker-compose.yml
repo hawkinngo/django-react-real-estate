@@ -26,8 +26,8 @@ services:
             dockerfile: Dockerfile.dev
         restart: on-failure
         volumes:
-            - ./client:/app
             - /app/node_modules
+            - ./client:/app
         networks:
             - estate-react
 
