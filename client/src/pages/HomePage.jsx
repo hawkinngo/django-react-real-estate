@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { Outlet } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -21,7 +20,6 @@ const HomePage = () => {
           </div>
         </div>
       </Container>
-      <Outlet />
     </header>
   );
 };
