@@ -7,6 +7,8 @@ import HomePage from "./pages/HomePage";
 import PropertiesPage from "./pages/PropertiesPage";
 
 const App = () => {
+  console.log("helo");
+
   return (
     <>
       <Router>
