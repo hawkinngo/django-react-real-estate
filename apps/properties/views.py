@@ -10,8 +10,11 @@ from rest_framework.views import APIView
 from .expections import PropertyNotFound
 from .models import Property, PropertyViews
 from .pagination import PropertyPagination
-from .serializers import (PropertyCreateSerializer, PropertySerializer,
-                          PropertyViewSerializer)
+from .serializers import (
+    PropertyCreateSerializer,
+    PropertySerializer,
+    PropertyViewSerializer,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -35,6 +38,7 @@ class PropertyFilter(django_filters.FilterSet):
 
 
 class ListAllPropertiesAPIView(generics.ListAPIView):
+
     serializer_class = PropertySerializer
     queryset = Property.objects.all().order_by("-created_at")
     pagination_class = PropertyPagination

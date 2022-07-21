@@ -25,7 +25,7 @@ class PropertyPublishedManager(models.Manager):
 class Property(TimeStampedUUIDModel):
     class AdvertType(models.TextChoices):
         FOR_SALE = "For Sale", _("For Sale")
-        FOR_RENT = "For Rent", _("For Sale")
+        FOR_RENT = "For Rent", _("For Rent")
         AUCTION = "Auction", _("Auction")
 
     class PropertyType(models.TextChoices):
