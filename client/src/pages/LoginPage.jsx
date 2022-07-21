@@ -84,7 +84,7 @@ const LoginPage = () => {
                 <Form.Control
                   type="password"
                   placeholder="Enter Password"
-                  value={email}
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Form.Group>
